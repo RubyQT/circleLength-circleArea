@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(-135deg, #ec8ec2, #008c8c);
+}
+
+.wrapper {
+    width: 450px;
+    height: 150px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* border-radius: 5%; */
+}
+
+.wrapper .input-data {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.wrapper .input-data input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+    font-size: 17px;
+}
+
+.wrapper .input-data #btn {
+    position: absolute;
+    top: 40px;
+    background-color: #fff;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 25px;
+    border: none;
+    border-bottom: 2px solid #008c8c;
+    font-size: 17px;
+}
+
+#printArea,
+#printLength {
+    position: absolute;
+    top: 65px;
+    width: 380px;
+    height: 10px;
+    border: none;
+    /* border-bottom: 2px solid #008c8c; */
+    font-size: 17px;
+}
+
+#printLength {
+    top: 90px;
+}
+
+
+.input-data input:focus~label,
+.input-data input:valid~label {
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158D0;
+}
+
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-data .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4158D0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before {
+    transform: scaleX(1);
+}
