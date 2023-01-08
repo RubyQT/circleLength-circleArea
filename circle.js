@@ -29,4 +29,3 @@ document.getElementById('btn').onclick = function () {
     document.getElementById('printLength').innerHTML = '周长为：' + circle.getLength().toFixed(2) + 'mm'
     // circle.getArea()注意加括号，我没回括号查了好久
 }
-
